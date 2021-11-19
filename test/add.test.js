@@ -1,4 +1,4 @@
-import chai from chai
+import chai from "chai"
 import add from "../src/add.js"
 
 const expect = chai.expect
