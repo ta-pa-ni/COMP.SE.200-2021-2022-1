@@ -1,4 +1,6 @@
 
+<a href='https://app.travis-ci.com/ta-pa-ni/COMP.SE.200-2021-2022-1.svg?branch=main'><img src='https://app.travis-ci.com/ta-pa-ni/COMP.SE.200-2021-2022-1.svg?branch=main' alt='Build Status' /></a>
+
 <a href='https://coveralls.io/github/ta-pa-ni/COMP.SE.200-2021-2022-1?branch=main'><img src='https://coveralls.io/repos/github/ta-pa-ni/COMP.SE.200-2021-2022-1/badge.svg?branch=main' alt='Coverage Status' /></a>
 
 # Student template
