@@ -13,3 +13,5 @@ Removing this license file directly violates terms and conditions of the softwar
 Individuals who remove or modify the license file will also carry the consequences.
 
 toinen testi!
+
+https://coveralls.io/repos/github/ta-pa-ni/COMP.SE.200-2021-2022-1/badge.svg?branch=main(Coverage Status)!:https://coveralls.io/github/ta-pa-ni/COMP.SE.200-2021-2022-1?branch=main
