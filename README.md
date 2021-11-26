@@ -15,3 +15,6 @@ Individuals who remove or modify the license file will also carry the consequenc
 toinen testi!
 
 https://coveralls.io/repos/github/ta-pa-ni/COMP.SE.200-2021-2022-1/badge.svg?branch=main(Coverage Status)!:https://coveralls.io/github/ta-pa-ni/COMP.SE.200-2021-2022-1?branch=main
+
+
+<a href='https://coveralls.io/github/ta-pa-ni/COMP.SE.200-2021-2022-1?branch=main'><img src='https://coveralls.io/repos/github/ta-pa-ni/COMP.SE.200-2021-2022-1/badge.svg?branch=main' alt='Coverage Status' /></a>
