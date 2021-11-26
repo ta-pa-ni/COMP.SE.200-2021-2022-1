@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 -n src/add.js -n src/capitalize.js -n src/filter.js -n src/isEmpty.js -n src/defaultTo.js -n src/isDate.js -n src/toInteger.js -n src/toNumber.js -n src/toString.js -n src/ceil.js --reporter=lcov --reporter=text-lcov mocha",
+    "test": "c8 -n ['src/add.js', 'src/capitalize.js', 'src/filter.js', 'src/isEmpty.js', 'src/defaultTo.js', 'src/isDate.js', 'src/toInteger.js', 'src/toNumber.js', 'src/toString.js', 'src/ceil.js'] --reporter=lcov --reporter=text-lcov mocha",
     "coverage": "c8 report --reporter=text-lcov | coveralls",
     "coverageflow": "c8 --check-coverage mocha --lines 10 --functions 10 --branches 10"
   },
