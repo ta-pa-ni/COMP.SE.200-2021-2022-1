@@ -7,7 +7,8 @@
   "scripts": {
     "test": "c8 --all true -n 'src/add.js' -n 'src/capitalize.js' -n 'src/ceil.js' -n 'src/filter.js' -n 'src/isEmpty.js' -n 'src/defaultTo.js' -n 'src/isDate.js' -n 'src/toInteger.js' -n 'src/toNumber.js' -n 'src/toString.js'  --reporter=lcov --reporter=text-lcov mocha",
     "coverage": "c8 report --all -n 'src/add.js' -n 'src/capitalize.js' -n 'src/ceil.js' -n 'src/filter.js' -n 'src/isEmpty.js' -n 'src/defaultTo.js' -n 'src/isDate.js' -n 'src/toInteger.js' -n 'src/toNumber.js' -n 'src/toString.js' --reporter=text-lcov | coveralls",
-    "coverageflow": "c8 --check-coverage mocha --lines 10 --functions 10 --branches 10"
+    "coverageflow": "c8 --check-coverage mocha --lines 10 --functions 10 --branches 10",
+    "justmocha": "mocha"
   },
   "author": "",
   "license": "MIT",
