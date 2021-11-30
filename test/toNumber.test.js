@@ -11,10 +11,11 @@ const expect = chai.expect
             * MIN_SAFE_INTEGER
         - positive integers
             * MAX_SAFE_INTEGER
-        - zero
+        - zero / empty string
        
     Not accepted:
         - Strings that are not valid number representations
+        - No value at all
         - Too big numbers (MAX_SAFE_INTEGER)
         - Too small numbers (MIN_SAFE_INTEGER)
         - Numbers with too big precision (should round to zero) (MIN_VAL)
@@ -36,6 +37,9 @@ describe("toNumber", () => {
         });
         it("change a string representation of zero into number", () =>{
             expect(toNumber("0")).to.equal(0)
+        });
+        it("change an empty string to a number (0)", () =>{
+            expect(toNumber("")).to.equal(0)
         });
     })
 
@@ -64,6 +68,8 @@ describe("toNumber", () => {
                             "00000000000005")).to.equal(Number.MIN_VALUE)
         })
 
+        
+        
         describe("not accepted limit values", () => {
             it("change a string representation of MAX_SAFE_INTEGER+1 to a number", () =>{
                 expect(toNumber("9007199254740992")).to.throw(RangeError)
@@ -81,6 +87,15 @@ describe("toNumber", () => {
                                 "000000000000000000000000000000000000000"+
                                 "000000000000000000000000000000000000000"+
                                 "000000000000005")).to.equal(0)
+            });
+        })
+
+        describe("not accepted values", () => {
+            it("change a string with no numbers to a number", () =>{
+                expect(toNumber("tässäpä ei ole laisinkaan numeroita!")).to.deep.equal(NaN)
+            });
+            it("change no value at all to a number", () =>{
+                expect(toNumber()).to.deep.equal(NaN)
             });
         })
     })

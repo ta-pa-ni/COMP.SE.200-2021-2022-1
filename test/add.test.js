@@ -19,6 +19,7 @@ const expect = chai.expect
     - Bigger than max val
     - Smaller than min val
     - Bigger precicion than allowed (don't know how to get this)
+    - One/both of the parameters are missing
 */
 describe("add", () => {
     describe("basic values", () => {
@@ -88,9 +89,16 @@ describe("add", () => {
         it("add a char to an array", () => {
             expect(add([], 'A')).to.throw(TypeError)
         })
+        it("no parameters"), () => {
+            expect(add()).to.throw(TypeError)
+        }
+        it("missing second parameter"), () => {
+            expect(add(1)).to.throw(TypeError)
+        }
         it("add an object to zero"), () => {
             expect(add(0, {"jee": "jee"})).to.throw(TypeError)
         }
+        
     })
 })
 
