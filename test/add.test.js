@@ -12,13 +12,13 @@ const expect = chai.expect
         * min val (Number.MIN_SAFE_INTEGER)
         * minus zero
     - Decimals
-        * Max precision / value closest to zero (both negative & positive)
+        * Max precision / value closest to zero
     
     Not accepted:
     - Wrong type (array/object/string/char)
     - Bigger than max val
     - Smaller than min val
-    - Bigger precicion than allowed
+    - Bigger precicion than allowed (don't know how to get this)
 */
 describe("add", () => {
     describe("basic values", () => {
@@ -52,19 +52,19 @@ describe("add", () => {
     })
 
     describe("accepted limit values", () => {
-        it("add -1 to max value", () =>{
+        it("add -1 to max value (MAX_SAFE_INTEGER)", () =>{
             expect(add(Number.MAX_SAFE_INTEGER,-1)).to.equal(Number.MAX_SAFE_INTEGER - 1)
         });
-        it("add 1 to max value -1", () =>{
+        it("add 1 to max value -1 (MAX_SAFE_INTEGER)", () =>{
            expect(add((Number.MAX_SAFE_INTEGER-1),1)).to.equal(Number.MAX_SAFE_INTEGER)
         });
-        it("add 1 to min negative value", () =>{
+        it("add 1 to min negative value (MIN_SAFE_INTEGER)", () =>{
            expect(add(Number.MIN_SAFE_INTEGER,1)).to.equal(Number.MIN_SAFE_INTEGER+1)
         });
-        it("add -1 to min negative value +1", () =>{
+        it("add -1 to min negative value +1 (MIN_SAFE_INTEGER)", () =>{
             expect(add((Number.MIN_SAFE_INTEGER+1),-1)).to.equal(Number.MIN_SAFE_INTEGER)
         });
-        it("add zero to a value closest to zero", () =>{
+        it("add zero to a value closest to zero (MIN_VALUE)", () =>{
             expect(add((Number.MIN_VALUE),0)).to.equal(Number.MIN_VALUE)
         });
     })
