@@ -13,6 +13,10 @@ const expect = chai.expect
         - positive integers
             * MAX_SAFE_INTEGER
         - zero
+        - array
+        - object
+        - symbol
+
        
     Not accepted:
         - No value
@@ -39,6 +43,15 @@ describe("toString", () => {
         });
         it("change zero into its string representation", () =>{
             expect(toString(0)).to.equal("0")
+        });
+        it("change an array into its string representation", () =>{
+            expect(toString([0,1,2,3,4])).to.equal("0,1,2,3,4")
+        });
+        it("change an object into its string representation", () =>{
+            expect(toString({"jee":"jee"})).to.equal("[object Object]")
+        });
+        it("change a symbol into its string representation", () =>{
+            expect(toString(Symbol())).to.equal("Symbol()")
         });
     })
 
