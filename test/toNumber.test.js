@@ -12,6 +12,13 @@ const expect = chai.expect
         - positive integers
             * MAX_SAFE_INTEGER
         - zero / empty string
+        - numbers
+        - some objects
+        - boolean
+        - binary number
+        - octal number
+        - hexal number
+
        
     Not accepted:
         - Strings that are not valid number representations
@@ -19,6 +26,7 @@ const expect = chai.expect
         - Too big numbers (MAX_SAFE_INTEGER)
         - Too small numbers (MIN_SAFE_INTEGER)
         - Numbers with too big precision (should round to zero) (MIN_VAL)
+        - Symbols
     
 */
 describe("toNumber", () => {
@@ -40,6 +48,21 @@ describe("toNumber", () => {
         });
         it("change an empty string to a number (0)", () =>{
             expect(toNumber("")).to.equal(0)
+        });
+        it("change a boolean value to a number", () =>{
+            expect(toNumber(true)).to.equal(1)
+        });
+        it("change a number to a number", () =>{
+            expect(toNumber(1.1)).to.equal(1.1)
+        });
+        it("change an octal number to a number", () =>{
+            expect(toNumber(0o010)).to.equal(8)
+        });
+        it("change a binary number to a number", () =>{
+            expect(toNumber(0b010)).to.equal(2)
+        });
+        it("change a hexal number to a number", () =>{
+            expect(toNumber(0x010)).to.equal(16)
         });
     })
 
@@ -96,6 +119,9 @@ describe("toNumber", () => {
         });
         it("change no value at all to a number", () =>{
             expect(toNumber()).to.deep.equal(NaN)
+        });
+        it("change symbol to a number", () =>{
+            expect(toNumber(Symbol())).to.deep.equal(NaN)
         });
     })
     

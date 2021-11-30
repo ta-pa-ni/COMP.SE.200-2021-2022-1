@@ -16,6 +16,9 @@ const expect = chai.expect
         - array
         - object
         - symbol
+        - octal number
+        - binary number
+        - hexal number
 
        
     Not accepted:
@@ -52,6 +55,15 @@ describe("toString", () => {
         });
         it("change a symbol into its string representation", () =>{
             expect(toString(Symbol())).to.equal("Symbol()")
+        });
+        it("change a hexal number into its string representation", () =>{
+            expect(toString(0x010)).to.equal("16")
+        });
+        it("change a binary number into its string representation", () =>{
+            expect(toString(0b010)).to.equal("2")
+        });
+        it("change an octal number into its string representation", () =>{
+            expect(toString(0o010)).to.equal("8")
         });
     })
 
