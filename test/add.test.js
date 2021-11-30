@@ -72,31 +72,28 @@ describe("add", () => {
 
     describe("not accepted limit values", () => {
         it("add +1 to max value", () => {
-            expect(add(Number.MAX_SAFE_INTEGER, 1)).to.throw(RangeError)
+            expect(() => add(Number.MAX_SAFE_INTEGER, 1)).to.throw(RangeError)
         })
         it("add -1 to min negative value", () => {
-            expect(add(Number.MIN_SAFE_INTEGER, -1)).to.throw(RangeError)
+            expect(() => add(Number.MIN_SAFE_INTEGER, -1)).to.throw(RangeError)
         })
     })
 
     describe("not accepted values", () => {
         it("add a string to a positive integer", () => {
-            expect(add(100, "sata")).to.throw(TypeError)
+            expect(() => add(100, "sata")).to.throw(TypeError)
         })
         it("add a negative integer to an array", () => {
-            expect(add([], -100)).to.throw(TypeError)
+            expect(() => add([], -100)).to.throw(TypeError)
         })
         it("add a char to an array", () => {
-            expect(add([], 'A')).to.throw(TypeError)
+            expect(() => add([], 'A')).to.throw(TypeError)
         })
         it("no parameters"), () => {
-            expect(add()).to.throw(TypeError)
+            expect(() => add()).to.throw(TypeError)
         }
         it("missing second parameter"), () => {
-            expect(add(1)).to.throw(TypeError)
-        }
-        it("add an object to zero"), () => {
-            expect(add(0, {"jee": "jee"})).to.throw(TypeError)
+            expect(() => add(1)).to.throw(TypeError)
         }
         
     })

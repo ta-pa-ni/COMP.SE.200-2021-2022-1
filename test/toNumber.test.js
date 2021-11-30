@@ -95,10 +95,10 @@ describe("toNumber", () => {
     
     describe("not accepted limit values", () => {
         it("change a string representation of MAX_SAFE_INTEGER+1 to a number", () =>{
-            expect(toNumber("9007199254740992")).to.throw(RangeError)
+            expect(() => toNumber("9007199254740992")).to.throw(RangeError)
         });
         it("change a string representation of MIN_SAFE_INTEGER-1 to a number", () =>{
-            expect(toNumber("-9007199254740992")).to.throw(RangeError)
+            expect(() => toNumber("-9007199254740992")).to.throw(RangeError)
         });
         it("change a string representation of less than MIN_VALUE to a number", () =>{
             expect(toNumber("0.0000000000000000000000000000000000000"+
