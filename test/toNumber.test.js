@@ -63,6 +63,9 @@ describe("toNumber", () => {
         it("change a hexal number to a number", () =>{
             expect(toNumber(0x010)).to.equal(16)
         });
+        it("change Number-object into number", () => {
+            expect(toNumber(Number)).to.deep.equal(NaN)
+        })
         
     })
 
