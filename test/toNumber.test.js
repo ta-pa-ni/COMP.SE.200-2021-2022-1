@@ -68,35 +68,35 @@ describe("toNumber", () => {
                             "00000000000005")).to.equal(Number.MIN_VALUE)
         })
 
-        
-        
-        describe("not accepted limit values", () => {
-            it("change a string representation of MAX_SAFE_INTEGER+1 to a number", () =>{
-                expect(toNumber("9007199254740992")).to.throw(RangeError)
-            });
-            it("change a string representation of MIN_SAFE_INTEGER-1 to a number", () =>{
-                expect(toNumber("-9007199254740992")).to.throw(RangeError)
-            });
-            it("change a string representation of less than MIN_VALUE to a number", () =>{
-                expect(toNumber("0.0000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000000000000000000000000000000"+
-                                "000000000000005")).to.equal(0)
-            });
-        })
-
-        describe("not accepted values", () => {
-            it("change a string with no numbers to a number", () =>{
-                expect(toNumber("tässäpä ei ole laisinkaan numeroita!")).to.deep.equal(NaN)
-            });
-            it("change no value at all to a number", () =>{
-                expect(toNumber()).to.deep.equal(NaN)
-            });
-        })
     })
+    
+    describe("not accepted limit values", () => {
+        it("change a string representation of MAX_SAFE_INTEGER+1 to a number", () =>{
+            expect(toNumber("9007199254740992")).to.throw(RangeError)
+        });
+        it("change a string representation of MIN_SAFE_INTEGER-1 to a number", () =>{
+            expect(toNumber("-9007199254740992")).to.throw(RangeError)
+        });
+        it("change a string representation of less than MIN_VALUE to a number", () =>{
+            expect(toNumber("0.0000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000000000000000000000000000000"+
+                            "000000000000005")).to.equal(0)
+        });
+    })
+
+    describe("not accepted values", () => {
+        it("change a string with no numbers to a number", () =>{
+            expect(toNumber("tässäpä ei ole laisinkaan numeroita!")).to.deep.equal(NaN)
+        });
+        it("change no value at all to a number", () =>{
+            expect(toNumber()).to.deep.equal(NaN)
+        });
+    })
+    
 })
