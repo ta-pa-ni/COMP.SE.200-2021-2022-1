@@ -55,13 +55,13 @@ describe("toNumber", () => {
             expect(toNumber(1.1)).to.equal(1.1)
         });
         it("change an octal number to a number", () =>{
-            expect(toNumber(0o010)).to.equal(8)
+            expect(toNumber('0o010')).to.equal(8)
         });
         it("change a binary number to a number", () =>{
-            expect(toNumber(0b010)).to.equal(2)
+            expect(toNumber('0b010')).to.equal(2)
         });
         it("change a hexal number to a number", () =>{
-            expect(toNumber(0x010)).to.equal(16)
+            expect(toNumber('0x010')).to.equal(16)
         });
         it("change Number-object into number", () => {
             expect(toNumber(Number)).to.deep.equal(NaN)
