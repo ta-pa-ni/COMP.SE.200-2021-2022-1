@@ -13,7 +13,6 @@ const expect = chai.expect
             * MAX_SAFE_INTEGER
         - zero / empty string
         - numbers
-        - some objects
         - boolean
         - binary number
         - octal number
@@ -64,6 +63,7 @@ describe("toNumber", () => {
         it("change a hexal number to a number", () =>{
             expect(toNumber(0x010)).to.equal(16)
         });
+        
     })
 
     describe("accepted limit values", () => {
