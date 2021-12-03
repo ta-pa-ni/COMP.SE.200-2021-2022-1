@@ -4,7 +4,7 @@ import capitalize from '../src/capitalize.js'
 const expect = chai.expect
 var should = chai.should()
 
-describe("capitalize: capitalize different string parameters", () => {
+describe("capitalize different string parameters", () => {
   it("to capitalize lowercase string", () =>{
       expect(capitalize('lowercase')).to.equal('Lowercase')
   });
@@ -13,7 +13,7 @@ describe("capitalize: capitalize different string parameters", () => {
   });
 })
 
-describe("capitalize: capitalize different non-string parameters", () => {
+describe("capitalize different non-string parameters", () => {
   it("to return number as a string", () =>{
     expect(capitalize(123)).to.equal('123')
   });
