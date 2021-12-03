@@ -20,10 +20,10 @@ describe("ceil", () => {
     })
     describe("not accepted values", () => { 
         it("take a ceil function out of a undefined", () =>{
-            expect(ceil(undefined)).to.equal(0)
+            expect(ceil(undefined)).to.equal(undefined)
         });
         it("take a ceil function out of a string", () =>{
-            expect(ceil("text")).to.equal(2)
+            expect(ceil("text")).to.equal("text")
         });
         it("take a ceil function out of a NaN", () =>{
             expect(ceil(NaN)).to.equal(NaN)
