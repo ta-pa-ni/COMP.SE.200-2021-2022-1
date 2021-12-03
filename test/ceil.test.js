@@ -4,7 +4,7 @@ import ceil from "../src/ceil.js"
 const expect = chai.expect
 
 describe("ceil", () => {
-    describe("ceil up", () => {
+    describe("accepted values", () => {
         it("take a ceil function out of a number 7,4 to 8", () =>{
             expect(ceil(7.4)).to.equal(8)
         });
@@ -13,6 +13,11 @@ describe("ceil", () => {
         });
         it("take a ceil function out of a number 7 with -1 precision", () =>{
             expect(ceil(7,-1)).to.equal(10)
+        });
+    })
+    describe("not accepted values", () => { 
+        it("take a ceil function out of a undefined", () =>{
+            expect(ceil(undefined)).to.equal(0)
         });
     })
 })
