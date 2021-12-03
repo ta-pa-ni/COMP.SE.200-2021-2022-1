@@ -19,14 +19,20 @@ describe("ceil", () => {
         });
     })
     describe("not accepted values", () => { 
-        it("take a ceil function out of a NaN", () =>{
-            expect(() => ceil(undefined).to.throw(Error))
+        it("take a ceil function out of a undefined", () =>{
+            expect(() => ceil(undefined)).to.throw(Error)
+        });
+        it("take a ceil function out of a nothing", () =>{
+            expect(() => ceil()).to.throw(Error)
+        });
+        it("take a ceil function out of a null", () =>{
+            expect(() => ceil(null)).to.throw(Error)
+        });
+        it("take a ceil function out of a text", () =>{
+            expect(() => ceil("text")).to.throw(Error)
         });
         it("take a ceil function out of a NaN", () =>{
-            expect(() => ceil("text").to.throw(Error))
-        });
-        it("take a ceil function out of a NaN", () =>{
-            expect(() => ceil(NaN).to.throw(Error))
+            expect(() => ceil(NaN)).to.throw(Error)
         });
     })
 })
