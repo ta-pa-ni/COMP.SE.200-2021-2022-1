@@ -11,7 +11,7 @@ describe("defaultTo", () => {
         it("return default value when given null", () =>{
             expect(defaultTo(null, "")).to.equal("")
         });
-        it("return default value when given Nan", () =>{
+        it("return default value when given NaN", () =>{
             expect(defaultTo(NaN, "")).to.equal("")
         });
     })
@@ -27,7 +27,7 @@ describe("defaultTo", () => {
         it("return default value when given null", () =>{
             expect(defaultTo(null, false)).to.equal(false)
         });
-        it("return default value when given Nan", () =>{
+        it("return default value when given NaN", () =>{
             expect(defaultTo(NaN, false)).to.equal(false)
         });
     })
@@ -43,7 +43,7 @@ describe("defaultTo", () => {
         it("return default value when given null", () =>{
             expect(defaultTo(null, 0)).to.equal(0)
         });
-        it("return default value when given Nan", () =>{
+        it("return default value when given NaN", () =>{
             expect(defaultTo(NaN, 0)).to.equal(0)
         });
     })
