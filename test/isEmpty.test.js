@@ -16,4 +16,13 @@ describe("isEmpty", () => {
 it("check if an object is null", () =>{
     expect(isEmpty(null)).to.equal(true)
 });
+it("check if an empty sting is empty", () =>{
+    expect(isEmpty("")).to.equal(true)
+});
+it("check if an string is not empty", () =>{
+    expect(isEmpty(" ")).to.equal(false)
+});
+it("check if all is gone", () =>{
+    expect(isEmpty()).to.equal(true)
+});
 })
