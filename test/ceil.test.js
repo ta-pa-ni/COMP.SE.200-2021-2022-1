@@ -8,6 +8,9 @@ describe("ceil", () => {
         it("take a ceil function out of a number 7,4 to 8", () =>{
             expect(ceil(7.4)).to.equal(8)
         });
+        it("take a ceil function out of a number 7,4 to 8", () =>{
+            expect(ceil(-7.4)).to.equal(-8)
+        });
         it("take a ceil function out of a number 3,006 with 2 percision", () =>{
             expect(ceil(3.006, 2)).to.equal(3.01)
         });
@@ -18,6 +21,12 @@ describe("ceil", () => {
     describe("not accepted values", () => { 
         it("take a ceil function out of a undefined", () =>{
             expect(ceil(undefined)).to.equal(0)
+        });
+        it("take a ceil function out of a string", () =>{
+            expect(ceil("text")).to.equal(2)
+        });
+        it("take a ceil function out of a NaN", () =>{
+            expect(ceil(NaN)).to.equal(NaN)
         });
     })
 })
