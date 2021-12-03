@@ -3,7 +3,7 @@ import isEmpty from "../src/isEmpty.js"
 
 const expect = chai.expect
 
-// check null tyhjä merkkijono   
+// lisää array, map object, ja jotain. 
 
 
 describe("isEmpty", () => {
