@@ -26,7 +26,7 @@ describe("ceil", () => {
             expect(ceil("text")).to.equal("text")
         });
         it("take a ceil function out of a NaN", () =>{
-            expect(ceil(NaN)).to.throw(Error)
+            expect(() => ceil(NaN).to.throw(Error))
         });
     })
 })
