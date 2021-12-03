@@ -8,7 +8,7 @@ describe("ceil", () => {
         it("take a ceil function out of a number 7,4 to 8", () =>{
             expect(ceil(7.4)).to.equal(8)
         });
-        it("take a ceil function out of a number 7,4 to 8", () =>{
+        it("take a ceil function out of a number -7,4 to -7", () =>{
             expect(ceil(-7.4)).to.equal(-7)
         });
         it("take a ceil function out of a number 3,006 with 2 percision", () =>{
