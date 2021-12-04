@@ -80,13 +80,13 @@ describe("filter", () => {
         it("try to filter an integer with greater than two -function", () =>{
             expect(() => {filter(1, (item) => {return item > 2})}).to.throw(TypeError)
         })
-        it("try to filter an integer with greater than two -function", () =>{
+        it("try to filter null with greater than two -function", () =>{
             expect(() => filter(null, (item) => {return item > 2})).to.throw(TypeError)
         })
-        it("try to filter an integer with greater than two -function", () =>{
+        it("try to filter undefined with greater than two -function", () =>{
             expect(() => filter(undefined, (item) => {return item > 2})).to.throw(TypeError)
         })
-        it("try to filter an integer with greater than two -function", () =>{
+        it("try to filter NaN with greater than two -function", () =>{
             expect(() => filter(NaN, (item) => {return item > 2})).to.throw(TypeError)
         })
     })
